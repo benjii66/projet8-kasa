@@ -4,8 +4,8 @@
 
 .tagButton {
     @include flex-center;
-    background: $primary-color;
-    color: $tertiary-color;
+    background: $primary-red;
+    color: $tertiary-white;
     margin-top: 4%;
     @include font(10px, 500);
     height: 18px;

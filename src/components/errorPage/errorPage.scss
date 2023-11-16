@@ -1,5 +1,5 @@
 .errorContainer {
-	color: $primary-color;
+	color: $primary-red;
 	@include flex-column;
 	margin: 22px 6%;
 }
@@ -36,7 +36,7 @@
 .errorLinkHome {
 	@extend %flex-error;
 	text-decoration: none;
-	color: $primary-color;
+	color: $primary-red;
 	@include font(14px, 500);
 	margin-top: 9rem;
 

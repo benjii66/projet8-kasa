@@ -3,14 +3,14 @@ import left from "../../assets/vector-left.svg";
 import right from "../../assets/vector-right.svg";
 
 export default function Carrousel({ slides }) {
-	const [current, setCurrent] = useState(0); 
+	const [currentSlide, setCurrent] = useState(0); 
 	const length = slides.length; 
 
 	const nextSlide = () => {
-		setCurrent(current === length - 1 ? 0 : current + 1); 
+		setCurrent(currentSlide === length - 1 ? 0 : currentSlide + 1); 
 	};
 	const prevSlide = () => {
-		setCurrent(current === 0 ? length - 1 : current - 1); 
+		setCurrent(currentSlide === 0 ? length - 1 : currentSlide - 1); 
 	};
 
 	return (
@@ -35,15 +35,15 @@ export default function Carrousel({ slides }) {
 				<div
 					key={index} 
 					className={
-						current === index
-							? "slider bl-msk wh-msk active-anim"
-							: "slider bl-msk wh-msk"
+						currentSlide === index
+							? "slider black-mask white-mask active-anim"
+							: "slider black-mask white-mask"
 					}
 				>
-					{index === current && <img src={slide} alt="appartement à louer" />}
-					{index === current && (
+					{index === currentSlide && <img src={slide} alt="appartement à louer" />}
+					{index === currentSlide && (
 						<span className="slider__number">
-							{current + 1}/{length}
+							{currentSlide + 1}/{length}
 						</span>
 					)}
 				</div>

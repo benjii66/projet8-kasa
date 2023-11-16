@@ -40,18 +40,18 @@ main {
   flex-direction: column;
 }
 
-.bl-msk {
+.black-mask {
   background: rgba(0, 0, 0, 0.3);
   mix-blend-mode: darken;
   border-radius: 25px;
 }
 
-.wh-msk {
+.white-mask {
   background: #f7f7f7;
   border-radius: 10px;
 }
 @media screen and (min-width: 769px) {
-  .wh-msk {
+  .white-mask {
     border-radius: 25px;
   }
 }
@@ -571,7 +571,7 @@ main {
   width: 100%;
 }
 
-.host-comp {
+.host-area {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -681,7 +681,8 @@ main {
   text-decoration-line: underline;
 }
 
-.rate-comp {
+
+.rate-area {
   display: flex;
   justify-content: space-between;
   width: 98px;
@@ -689,7 +690,7 @@ main {
   margin-top: 24px;
 }
 @media screen and (min-width: 769px) {
-  .rate-comp {
+  .rate-area {
     width: 196px;
     height: 36px;
   }

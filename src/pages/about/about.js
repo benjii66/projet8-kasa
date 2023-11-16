@@ -6,11 +6,11 @@ export default function About() {
 	return (
 		<>
 			<AboutBanner />
-			{aboutArray.map((rule, id) => (
+			{aboutArray.map((aboutRule, id) => (
 				<Collapse
 					key={id}
-					aboutTitle={rule.aboutTitle}
-					aboutText={rule.aboutText}
+					aboutTitle={aboutRule.aboutTitle}
+					aboutText={aboutRule.aboutText}
 					aboutStyle="about-style"
 				/>
 			))}

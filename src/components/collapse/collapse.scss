@@ -7,8 +7,8 @@
 	}
 
 	&__visible {
-		background: $primary-color;
-		color: $tertiary-color;
+		background: $primary-red;
+		color: $tertiary-white;
 		cursor: pointer;
 		display: flex;
 		justify-content: space-between;
@@ -33,8 +33,8 @@
 
 	&__toggle {
 		opacity: 0;
-		color: $primary-color;
-		background: $secondary-color;
+		color: $primary-red;
+		background: $secondary-white;
 		border-radius: 5px;
 		transition: opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
 
