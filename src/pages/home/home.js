@@ -8,7 +8,7 @@ export default function Home() {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		axios.get("/logements.json").then((res) => setData(res.data)); 
+		axios.get("/logements.json").then((res) => setData(res.data)); //of course we start so implement the possibility to have the backend ready too
 	}, []);
 
 	return (

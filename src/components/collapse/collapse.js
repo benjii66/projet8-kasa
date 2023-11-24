@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import Chevron from "../../assets/vectorBas.svg";
 
 export default function Collapse(props) {
+
+	const {aboutStyle, aboutTitle, aboutText} = props;
 	const [toggle, setToggle] = useState(false); 
 	const [heightElement, setHeightElement] = useState(); //toggle state by the element
 
@@ -13,14 +15,14 @@ export default function Collapse(props) {
 	const refHeight = useRef(); 
 
 	useEffect(() => {
-		setHeightElement(`${refHeight.current.scrollHeight}px`);
+		setHeightElement(refHeight.current.scrollHeight);
 	}, []);
 
 	return (
 		//display the collapse or roll it back, depend of the click 
-		<div className={`collapse ${props.aboutStyle}`}>
+		<div className={`collapse ${aboutStyle}`}>
 			<div onClick={toggleState} className="collapse__visible">
-				<h2>{props.aboutTitle}</h2>
+				<h2>{aboutTitle}</h2>
 				<img
 					className={toggle ? "chevron rotated" : "chevron"}
 					src={Chevron}
@@ -30,10 +32,12 @@ export default function Collapse(props) {
 			<div
 				ref={refHeight}
 				className={toggle ? "collapse__toggle animated" : "collapse__toggle"} //do you know how happy I am with ternaries ?
-				style={{ height: toggle ? `${heightElement}` : "0px" }}
+				style={{ height: toggle ? heightElement+"px" : "0px" }}
 			>
-				<p aria-hidden={toggle ? "true" : "false"}>{props.aboutText}</p>
+				<p aria-hidden={toggle ? "true" : "false"}>{aboutText}</p>
 			</div>
 		</div>
 	);
+
 }
+

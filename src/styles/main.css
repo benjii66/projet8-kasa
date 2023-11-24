@@ -292,7 +292,7 @@ main {
   right: 2%;
   width: 12px;
   height: 20px;
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
 }
 @media screen and (min-width: 769px) {
@@ -310,7 +310,7 @@ main {
   left: 2%;
   width: 12px;
   height: 20px;
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
 }
 @media screen and (min-width: 769px) {
@@ -540,7 +540,7 @@ main {
   }
 }
 .foot-container img {
-  margin-top: 2%;
+  margin-top: 5%;
   width: 122px;
   height: 40px;
 }
@@ -651,10 +651,12 @@ main {
   align-items: center;
   justify-content: flex-end;
   text-transform: uppercase;
+  margin-right: 200px;
 }
 @media screen and (min-width: 769px) {
   .nav-header {
     text-transform: none;
+    margin-right: 200px;
   }
 }
 .nav-header_link-home, .nav-header_link-about {
@@ -665,7 +667,8 @@ main {
   line-height: 142.6%;
   color: #ff6060;
   text-decoration: none;
-  padding-left: 0.8rem;
+  padding-left: 1rem;
+  margin-right: 200px;
 }
 @media screen and (min-width: 769px) {
   .nav-header_link-home, .nav-header_link-about {
@@ -675,12 +678,12 @@ main {
     text-align: right;
     line-height: 142.6%;
     padding-left: 3.5rem;
+    margin-right: 200px;
   }
 }
 .nav-header_link-home:hover, .nav-header_link-home:focus, .nav-header_link-about:hover, .nav-header_link-about:focus {
   text-decoration-line: underline;
 }
-
 
 .rate-area {
   display: flex;

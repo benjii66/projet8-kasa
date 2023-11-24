@@ -4,13 +4,13 @@ import About from "./pages/about/about";
 import Header from "./components/header/header";
 import FicheLogement from "./pages/ficheLogement/ficheLogement";
 import Footer from "./components/footer/footer";
-import Error from "./pages/error/error.js";
+import Error from "./pages/error/error";
 
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
+	return (
+		<div className="App">
+			<Header />
 			<main>
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -19,9 +19,9 @@ function App() {
 					<Route path="*" element={<Error />} />
 				</Routes>
 			</main>
-			<Footer /> 
-    </div>
-  );
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

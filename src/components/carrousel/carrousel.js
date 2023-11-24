@@ -39,12 +39,14 @@ export default function Carrousel({ slides }) {
 							? "slider black-mask white-mask active-anim"
 							: "slider black-mask white-mask"
 					}
-				>
-					{index === currentSlide && <img src={slide} alt="appartement à louer" />}
+				>					
 					{index === currentSlide && (
+						<>
+						<img src={slide} alt="appartement à louer" />
 						<span className="slider__number">
 							{currentSlide + 1}/{length}
 						</span>
+						</>
 					)}
 				</div>
 			))}
