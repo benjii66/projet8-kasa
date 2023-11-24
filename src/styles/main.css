@@ -153,8 +153,8 @@ main {
 }
 @media screen and (min-width: 769px) {
   .card-logement {
-    width: 340px;
-    height: 340px;
+    width: 500px;
+    height: 280px;
   }
   .card-logement:hover, .card-logement:focus {
     box-shadow: rgba(255, 96, 96, 0.9) 0 0 22px 6px;
@@ -196,7 +196,7 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 30px;
+  gap: 20vh;
   border-radius: 10px;
   margin: 22px 0;
   flex-wrap: wrap;
