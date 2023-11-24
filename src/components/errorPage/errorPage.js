@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
+	//display the Error Page Content, with an oops and a redirection to the home page
 	return (
 		<div className="errorContainer">
 			<p className="errorNumber">404</p>

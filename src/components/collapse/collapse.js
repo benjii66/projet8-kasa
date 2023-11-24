@@ -3,6 +3,8 @@ import Chevron from "../../assets/vectorBas.svg";
 
 export default function Collapse(props) {
 
+	//here's the collapsing part of the differents home when you click it'll display or not like an accordion 
+
 	const {aboutStyle, aboutTitle, aboutText} = props;
 	const [toggle, setToggle] = useState(false); 
 	const [heightElement, setHeightElement] = useState(); //toggle state by the element
@@ -27,6 +29,7 @@ export default function Collapse(props) {
 					className={toggle ? "chevron rotated" : "chevron"}
 					src={Chevron}
 					alt="chevron"
+					aria-label="Carrousel chevron"
 				/>
 			</div>
 			<div
@@ -34,7 +37,7 @@ export default function Collapse(props) {
 				className={toggle ? "collapse__toggle animated" : "collapse__toggle"} //do you know how happy I am with ternaries ?
 				style={{ height: toggle ? heightElement+"px" : "0px" }}
 			>
-				<p aria-hidden={toggle ? "true" : "false"}>{aboutText}</p>
+				 <p aria-hidden={toggle ? "true" : "false"}>{aboutText}</p>  {/*display the content when it's activated  */}
 			</div>
 		</div>
 	);

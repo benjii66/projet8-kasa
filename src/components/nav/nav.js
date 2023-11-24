@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
 	return (
+
+		//return the navigation content, with 2 links to the homepage and about page
 		<nav className="nav-header">
 			<Link to="/" aria-label="Home Page"className="nav-header_link-home">
 				Accueil

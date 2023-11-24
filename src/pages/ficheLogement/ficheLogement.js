@@ -11,13 +11,16 @@ export default function FicheLogement() {
 	const params = useParams();
 	const navigate = useNavigate();
 
+	// display a chosen appartement with all his informations
+
 	const [chosenAppart, setchosenAppart] = useState();
 	useEffect(() => {
 		const getData = async () => {
-			const res = await axios.get("/logements.json");
-			const picked = res.data.find(({ id }) => id === params.id);
-			res.data.map(() => setchosenAppart(picked));
-			if (picked === undefined) navigate("/404", { state: { message: "Can't get data" } }); 
+
+			const appartmentRes = await axios.get("/logements.json");
+			const appartmentPicked = appartmentRes.data.find(({ id }) => id === params.id);
+			appartmentRes.data.map(() => setchosenAppart(appartmentPicked));
+			if (appartmentPicked === undefined) navigate("/404", { state: { message: "Can't get data" } }); 
 			
 		};
 		getData();
@@ -26,13 +29,15 @@ export default function FicheLogement() {
 	const slidePics = chosenAppart && chosenAppart.pictures;
 	const tags = chosenAppart && chosenAppart.tags;
 	const equipments = chosenAppart && chosenAppart.equipments;
-	const equip =
+	const appartementEquipements =
 		chosenAppart &&
 		equipments.map((item, index) => (
 			<li key={index} className="equipList">
 				{item}
 			</li>
 		));
+
+		// here we'll display the informations, firstly a carrousel with few pics of the appartment and then his tags and content
 	return (
 		chosenAppart && (
 			<div key={params.id} className="fiche-container">
@@ -66,7 +71,7 @@ export default function FicheLogement() {
 						aboutTitle="Description"
 						aboutText={chosenAppart.description}
 					/>
-					<Collapse aboutTitle="Équipements" aboutText={equip} />
+					<Collapse aboutTitle="Équipements" aboutText={appartementEquipements} />
 				</div>
 			</div>
 		)

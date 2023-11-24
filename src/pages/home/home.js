@@ -13,6 +13,9 @@ export default function Home() {
 
 	return (
 		<>
+		{/* display all the logements with the data.map 
+			the <> </> is a fragment it put the DOM content under their parent (here a div), it avoid HTML DOM issues
+		*/}
 			<Banner />
 			<div className="cards-container">
 				{data.map((appart, id) => (

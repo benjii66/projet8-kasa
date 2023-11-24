@@ -3,7 +3,9 @@ import left from "../../assets/vector-left.svg";
 import right from "../../assets/vector-right.svg";
 
 export default function Carrousel({ slides }) {
-	const [currentSlide, setCurrent] = useState(0); 
+	//the carrousel part of each homes, it displays 6 pictures
+
+	const [currentSlide, setCurrent] = useState(0); //set the state of the carroussel
 	const length = slides.length; 
 
 	const nextSlide = () => {
@@ -15,12 +17,14 @@ export default function Carrousel({ slides }) {
 
 	return (
 		<section id="carrousel-container">
+			{/* if statement if there's pictures */}
 			{length > 1 && (
 				<img
 					src={left} 
 					alt="gauche"
 					onClick={prevSlide}
 					className="leftArrow"
+					aria-label="left arrow"
 				/>
 			)}
 			{length > 1 && (
@@ -29,6 +33,8 @@ export default function Carrousel({ slides }) {
 					alt="droite"
 					onClick={nextSlide}
 					className="rightArrow"
+					aria-label="right arrow"
+
 				/>
 			)}
 			{slides.map((slide, index) => (
@@ -42,7 +48,7 @@ export default function Carrousel({ slides }) {
 				>					
 					{index === currentSlide && (
 						<>
-						<img src={slide} alt="appartement à louer" />
+						<img src={slide} alt="appartement à louer" aria-label={slide}/>
 						<span className="slider__number">
 							{currentSlide + 1}/{length}
 						</span>
