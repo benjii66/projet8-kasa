@@ -33,7 +33,7 @@ export default function Carrousel({ slides }) {
 			)}
 			{slides.map((slide, index) => (
 				<div
-					key={index} 
+					key={slide.id} 
 					className={
 						currentSlide === index
 							? "slider black-mask white-mask active-anim"

@@ -1,7 +1,8 @@
 export default function Tag(props) {
+	const {tag} = props;
 	return (
 		<div className="tagContainer">
-			<span className="tagButton">{props.tag}</span>
+			<span className="tagButton">{tag}</span>
 		</div>
 	);
 }
