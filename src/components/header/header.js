@@ -6,7 +6,7 @@ export default function Header() {
 	return (
 		<header className="headerWrap">
 			<figure className="headerWrap__fig">
-				<Link to="/">
+				<Link to="/" aria-label="Kasa Logo">
 				<img className="logo" src={logo} alt="logo de l'agence kasa" />
 				</Link>
 			</figure>

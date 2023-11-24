@@ -17,7 +17,7 @@ export default function Home() {
 			<div className="cards-container">
 				{data.map((appart, id) => (
 					<div className="card_logement" key={id}>
-						<Link className="link_card_logement" to={`/logement/${appart.id}`}>
+						<Link aria-label="Logement Page" className="link_card_logement" to={`/logement/${appart.id}`}>
 							<Card cover={appart.cover} title={appart.title} />
 						</Link>
 					</div>
