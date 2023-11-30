@@ -73,6 +73,7 @@
 
 .about-style {
 	width: 100%;
+	text-decoration: line-through;
 	@include flex-column;
 
 	@media screen and (min-width: $breakpoint-desktop) {
