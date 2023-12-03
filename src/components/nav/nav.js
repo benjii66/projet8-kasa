@@ -1,14 +1,14 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
   return (
     <nav className="nav-header">
-      <NavLink to="/" aria-label="Home Page" className="nav-header_link-home" activeClassName="active">
+      <Link to="/" aria-label="Home Page" className="nav-header_link-home">
         Accueil
-      </NavLink>
-      <NavLink to="/about" aria-label="About Page" className="nav-header_link-about" activeClassName="active">
+      </Link>
+      <Link to="/about" aria-label="About Page" className="nav-header_link-about">
         A Propos
-      </NavLink>
+      </Link>
     </nav>
   );
 }
