@@ -25,7 +25,7 @@ export default function FicheLogement() {
 		};
 		getData();
 		
-	}, []); 
+	}); 
 	const slidePics = chosenAppart && chosenAppart.pictures;
 	const tags = chosenAppart && chosenAppart.tags;
 	const equipments = chosenAppart && chosenAppart.equipments;
