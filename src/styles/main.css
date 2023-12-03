@@ -409,8 +409,8 @@ main {
 
 .about-style {
   width: 100%;
-  -webkit-text-decoration: non;
-          text-decoration: non;
+  -webkit-text-decoration: none;
+          text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
